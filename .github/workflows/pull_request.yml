@@ -25,4 +25,4 @@ jobs:
         if: ${{ github.event_name != 'pull_request_target' && github.event_name != 'pull_request' }}
         with:
           buf_token: ${{ secrets.BUF_TOKEN }}
-          draft: ${{ github.ref_name != 'master'}}
+          draft: ${{ github.ref_name != 'master' || github.ref_name != 'meshbus' }}
