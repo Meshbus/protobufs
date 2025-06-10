@@ -17,7 +17,7 @@ jobs:
         run: cat packages/ts/deno.json && cat packages/rust/Cargo.toml
       - name: Set Package Versions to dev version
         run: |
-          VERSION="2.6.11-dev.${{ github.run_number }}"
+          VERSION="2.6.11-dev.$(date +%Y%m%d%H%M)"
           sed -i "s/__PACKAGE_VERSION__/${VERSION}/g" packages/ts/deno.json
           sed -i "s/__PACKAGE_VERSION__/${VERSION}/g" packages/rust/Cargo.toml
       - name: Setup Buf
