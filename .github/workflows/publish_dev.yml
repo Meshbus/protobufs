@@ -48,20 +48,6 @@ jobs:
           name: c_code
           path: packages/c
 
-  publish-regstry:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Setup Buf
-        uses: bufbuild/buf-setup-action@v1.30.0
-        with:
-          github_token: ${{ github.token }}
-      - name: Push to schema registry
-        run: |
-          export BUF_TOKEN=${{ secrets.BUF_TOKEN }}
-          buf push --tag "${{ github.ref_name }}.${{ github.run_number }}"
-
   publish-jsr:
     runs-on: ubuntu-latest
     needs: codegen
