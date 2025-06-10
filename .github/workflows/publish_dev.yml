@@ -3,7 +3,7 @@ name: Publish to Cargo & JSR on Dev
 on:
   push:
     branches:
-      - meshbus
+      - dev
 
 permissions: write-all
 
