@@ -1,0 +1,15 @@
+[package]
+name = "meshbus_protobufs"
+edition = "2025"
+version = "__PACKAGE_VERSION__"
+description = "Meshbus Protobuf definitions"
+repository = "https://github.com/meshbus/protobufs"
+license-file = "LICENSE"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
+
+[dependencies]
+prost = "0.13.3"
+prost-types = "0.13.3"
