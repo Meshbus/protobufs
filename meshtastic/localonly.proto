@@ -131,6 +131,17 @@ message LocalModuleConfig {
    */
   ModuleConfig.PaxcounterConfig paxcounter = 14;
 
+  /* --------------------------------------------------------
+   * The following modules are specific for Meshbus Firmware
+   * and are not used in the official Meshtastic firmware.
+   * --------------------------------------------------------
+   */
+
+  /*
+   * Meshbus Serial Config
+   */
+  ModuleConfig.MeshbusSerialConfig meshbus_serial = 511;
+
   /*
    * A version integer used to invalidate old save files when we make
    * incompatible changes This integer is set at build time and is private to
